@@ -1,0 +1,84 @@
+html, body {
+  color: #39633d;
+  background: #ededed;
+}
+
+th {
+  padding: 0 5px;
+
+}
+
+.btn-primary {
+  background: #39633d;
+  border: 1px solid #325936;
+}
+
+.btn-primary:hover {
+  background: #4d7a51;
+  border: 1px solid #47734b;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+  background: #5b875e;
+  border: 1px solid #548057;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+}
+
+#pedsql-logo {
+  color: #044BAD;
+  display: flex;
+}
+
+#pedsql-logo .name {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+}
+
+#pedsql-logo .tm {
+  padding-top: 8px;
+}
+
+#term {
+  padding: 8px 30px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 8px;
+  background: #E5EDD6;
+}
+
+.pedsql table {
+  margin: 15px 0;
+}
+
+.pedsql thead tr {
+  border-top: 1px solid #a7a7a7;
+  border-bottom: 1px solid #a7a7a7;
+}
+
+.pedsql tbody tr {
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.pedsql table, .pedsql tr {
+  width: 100%;
+}
+
+.pedsql thead td:not(:first-child) {
+  font-size: 0.8rem;
+}
+
+.pedsql td {
+  text-align: center;
+  width: 10%;
+}
+
+.pedsql td:first-child {
+  text-align: left;
+  width: 50%;
+}

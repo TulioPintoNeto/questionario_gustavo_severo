@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Questionário</title>
+  </head>
+  <body class="container">
+    <header>
+      <div class="row">
+        <div class="col-6">
+          <img
+            src="logo-hospital-de-clinicas.svg"
+            alt="Logo do Hospital de Clínicas"
+            width="200"
+          />
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+          <img
+            class="d-none"
+            id="mapi-logo"
+            src="logo-mapi-research-trust.png"
+            alt="Logo da Mapi Research Trust"
+            width="180"
+          />
+        </div>
+      </div>
+      <h1 class="h2 py-4 text-center">
+        Pediatric Tracheotomy Health Status Instrument (PTHSI)
+      </h1>
+    </header>
+
+    <section id="section-term" class="">
+      <div id="term">
+        <h2 class="h4 text-center">
+          TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO - Fase 2
+        </h2>
+        <h3 class="h6 py-1">
+          Título do Projeto: Tradução e validação do questionário Pediatric
+          Tracheotomy Health Status Instrument (PTHSI) para o português
+          brasileiro
+        </h3>
+        <p>
+          Você está sendo convidado (a) a participar de uma pesquisa cujo
+          objetivo é traduzir e adaptar para a população brasileira um
+          questionário que mede a qualidade de vida de crianças e adolescentes
+          traqueostomizados e também a qualidade de vida de seus responsáveis.
+          Esta pesquisa está sendo realizada pelo Serviço de
+          Otorrinolaringologia do Hospital de Clínicas de Porto Alegre (HCPA) em
+          colaboração com o Grupo de Pesquisa em Via Aérea Pediátrica do HCPA.
+        </p>
+        <p>
+          Se você aceitar participar da pesquisa, os procedimentos envolvidos em
+          sua participação são os seguintes:
+        </p>
+        <p>
+          Será fornecido a você dois questionários que deverão ser preenchidos
+          na sua totalidade. Um dos questionários, que já é utilizado no Brasil,
+          mede a qualidade de vida de crianças e adolescentes e possui 23
+          perguntas. O outro questionário, que estamos adaptando para a
+          população brasileira, mede a qualidade de vida de crianças e
+          adolescentes traqueostomizados e possui 34 perguntas. Os questionários
+          são auto-aplicados e o tempo estimado para respostas é de 20 minutos.
+          O preenchimento dos questionários será realizado enquanto se aguarda a
+          realização de algum compromisso que a criança tenha no hospital
+          (consulta médica ou fonoaudiológica, troca de cânula ou exame de
+          rotina).
+        </p>
+        <p>
+          Não são conhecidos riscos pela participação na pesquisa. Os possíveis
+          desconfortos gerados são decorrentes do tempo despendido para
+          responder os questionários.
+        </p>
+        <p>
+          Você não terá um benefício direto ao participar desta pesquisa, porém
+          após o questionário ser traduzido e validado para nossa língua e
+          cultura, ele poderá ser aplicado nos pais e responsáveis de
+          adolescentes e crianças traqueostomizadas e assim poderemos
+          identificar aspectos críticos no cuidado dessas crianças aos quais
+          será dado a devida atenção, com vistas a melhorar a qualidade de vida
+          dessas famílias.
+        </p>
+        <p>
+          Sua participação na pesquisa é totalmente voluntária, ou seja, não é
+          obrigatória. Caso você decida não participar, ou ainda, desistir de
+          participar e retirar seu consentimento, não haverá nenhum prejuízo ao
+          atendimento que você recebe ou possa vir a receber na instituição.
+        </p>
+        <p>
+          Não está previsto nenhum tipo de pagamento pela sua participação na
+          pesquisa e você não terá nenhum custo com respeito aos procedimentos
+          envolvidos.
+        </p>
+        <p>
+          Caso ocorra alguma intercorrência, resultante de sua participação na
+          pesquisa, você receberá todo o atendimento necessário, sem nenhum
+          custo pessoal.
+        </p>
+        <p>
+          Os dados coletados durante a pesquisa serão sempre tratados
+          confidencialmente. Os resultados serão apresentados de forma conjunta,
+          sem a identificação dos participantes, ou seja, o seu nome não
+          aparecerá na publicação dos resultados.
+        </p>
+        <p>
+          Caso você tenha dúvidas, poderá entrar em contato com o pesquisador
+          responsável Professor Doutor José Paulo Cauduro Marostica, pelo
+          telefone (51) 33598213, com o pesquisador Gustavo Vasconcellos Severo,
+          pelo telefone 33598249 ou com o Comitê de Ética em Pesquisa do
+          Hospital de Clínicas de Porto Alegre (HCPA), pelo telefone (51)
+          33597640, ou no 2º andar do HCPA, sala 2227, de segunda à sexta, das
+          8h às 17h.
+        </p>
+      </div>
+      <form class="needs-validation" novalidate>
+        <div class="form-check py-2">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="term-acceptance"
+            required
+          />
+          <label class="form-check-label" for="term-acceptance">
+            Eu li e concordo com o termo de consentimento
+          </label>
+          <div class="invalid-feedback">
+            Você deve concordar com o termo para prosseguir.
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <button type="submit" class="btn btn-primary">Prosseguir</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="section-user-data" class="d-none">
+      <form class="needs-validation" novalidate>
+        <p class="h5">Seus dados</p>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="parentName">Nome*</label>
+            <input
+              type="name"
+              name="name"
+              class="form-control"
+              id="parentName"
+              placeholder="Seu nome"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="city">Cidade que mora*</label>
+            <input
+              type="name"
+              name="city"
+              class="form-control"
+              id="city"
+              placeholder="Sua cidade"
+              autocomplete="address-level2"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="schooling">Grau de Escolaridade*</label>
+            <select
+              name="schooling"
+              id="schooling"
+              class="form-control"
+              required
+            >
+              <option value="" selected disabled>Escolha uma opção...</option>
+              <option>Fundamental Incompleto</option>
+              <option>Fundamental Completo</option>
+              <option>Médio Incompleto</option>
+              <option>Médio Completo</option>
+              <option>Superior Incompleto</option>
+              <option>Superior Completo ou mais</option>
+            </select>
+          </div>
+          <div class="form-group col-md-3 d-none">
+            <label for="schoolingOther">Até que série/ano cursou?*</label>
+            <input
+              type="name"
+              name="schoolingOther"
+              class="form-control"
+              id="schoolingOther"
+              placeholder="Especifique a série/ano"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="income">Renda*</label>
+            <div class="row align-items-center">
+              <div class="col-6">
+                <input
+                  type="name"
+                  name="income"
+                  class="form-control"
+                  id="income"
+                  placeholder="Sua renda"
+                  required
+                />
+              </div>
+              <div class="col-6">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="incomeRefuse"
+                />
+                <label class="form-check-label" for="incomeRefuse">
+                  Prefiro não responder
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="relatives">Grau de Parentesco*</label>
+            <input
+              type="name"
+              name="relatives"
+              class="form-control"
+              id="relatives"
+              placeholder="Seu grau de parentesco com a criança"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="skinColor">Cor de Pele*</label>
+            <select name="skinColor" id="skinColor" class="form-control" required>
+              <option value="" selected disabled>Escolha uma opção...</option>
+              <option>Amarelo/Asiático</option>
+              <option>Branco</option>
+              <option>Indígena</option>
+              <option>Pardo</option>
+              <option>Preto</option>
+              <option>Outro</option>
+              <option>Prefiro não responder</option>
+            </select>
+          </div>
+          <div class="form-group col-md-3 d-none">
+            <label for="skinColorOther">Qual?*</label>
+            <input
+              type="name"
+              name="skinColorOther"
+              class="form-control"
+              id="skinColorOther"
+              placeholder="Especifique sua cor de pele"
+            />
+          </div>
+        </div>
+        <p class="h5 pt-3">Dados da criança</p>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="childName">Nome*</label>
+            <input
+              type="name"
+              name="name"
+              class="form-control"
+              id="childName"
+              placeholder="Nome da criança"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="childAge">Idade*</label>
+            <select name="childAge" id="childAge" class="form-control" required>
+              <option value="" selected disabled>Escolha uma opção...</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+            </select>
+          </div>
+        </div>
+        </div>
+        <p class="h5 pt-3">Dados do acompanhamento</p>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="followingCity">Cidade*</label>
+            <input
+              type="name"
+              name="name"
+              class="form-control"
+              id="followingCity"
+              placeholder="Cidade em que faz o acompanhamento"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="followingType">Privado/público?*</label>
+            <select name="followingType" id="followingType" class="form-control" required>
+              <option value="" selected disabled>Escolha uma opção...</option>
+              <option>Sus</option>
+              <option>Privado</option>
+              <option>Misto/Ambos</option>
+            </select>
+          </div>
+        </div>
+        <div class="row justify-content-center pt-3">
+          <button type="submit" class="btn btn-primary">Prosseguir</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="pedsql-5-7" class="pedsql d-none">
+      <form>
+      </form>
+    </section>
+
+    <section id="pedsql-8-12" class="pedsql d-none">
+      <form>
+      </form>
+    </section>
+
+    <section id="pedsql-13-18" class="pedsql d-none">
+      <form>
+      </form>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+      integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/questions.js" crossorigin="anonymous"></script>
+    <script src="js/create.js" crossorigin="anonymous"></script>
+    <script src="js/index.js" crossorigin="anonymous"></script>
+  </body>
+</html>
