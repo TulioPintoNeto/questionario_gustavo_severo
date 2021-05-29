@@ -5,7 +5,10 @@ html, body {
 
 th {
   padding: 0 5px;
+}
 
+.btn {
+  width: 120px;
 }
 
 .btn-primary {
@@ -30,18 +33,27 @@ th {
   border-radius: 4px;
 }
 
-#pedsql-logo {
-  color: #044BAD;
-  display: flex;
+.was-validated .invalid-feedback:not(.automatically) {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -12px;
 }
 
-#pedsql-logo .name {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 800;
+.form-control.is-valid, .was-validated .form-control:valid {
+  background-position: center right calc(.7em + .1875rem)
 }
 
-#pedsql-logo .tm {
-  padding-top: 8px;
+.form-control.is-invalid, .was-validated .form-control:invalid {
+  background-position: center right calc(0.7em + .1875rem);
+}
+
+#hcpa-logo {
+  width: 200px;
+}
+
+#mapi-logo {
+  width: 180px;
 }
 
 #term {
@@ -81,4 +93,10 @@ th {
 .pedsql td:first-child {
   text-align: left;
   width: 50%;
+}
+
+#final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

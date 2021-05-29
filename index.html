@@ -24,29 +24,27 @@
   <body class="container">
     <header>
       <div class="row">
-        <div class="col-6">
+        <div class="col-md-6 d-flex justify-content-center justify-content-md-start pb-4 pb-md-0">
           <img
+            id="hcpa-logo"
             src="logo-hospital-de-clinicas.svg"
             alt="Logo do Hospital de Clínicas"
-            width="200"
           />
         </div>
-        <div class="col-6 d-flex justify-content-end">
+        <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
           <img
             class="d-none"
             id="mapi-logo"
             src="logo-mapi-research-trust.png"
             alt="Logo da Mapi Research Trust"
-            width="180"
           />
         </div>
       </div>
-      <h1 class="h2 py-4 text-center">
-        Pediatric Tracheotomy Health Status Instrument (PTHSI)
+      <h1 class="h2 py-4 text-center" id="title">
       </h1>
     </header>
 
-    <section id="section-term" class="">
+    <section id="section-term">
       <div id="term">
         <h2 class="h4 text-center">
           TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO - Fase 2
@@ -139,7 +137,7 @@
           <label class="form-check-label" for="term-acceptance">
             Eu li e concordo com o termo de consentimento
           </label>
-          <div class="invalid-feedback">
+          <div class="invalid-feedback automatically">
             Você deve concordar com o termo para prosseguir.
           </div>
         </div>
@@ -186,7 +184,7 @@
               id="schooling"
               class="form-control"
               required
-            >
+          >
               <option value="" selected disabled>Escolha uma opção...</option>
               <option>Fundamental Incompleto</option>
               <option>Fundamental Completo</option>
@@ -248,9 +246,7 @@
             <label for="skinColor">Cor de Pele*</label>
             <select name="skinColor" id="skinColor" class="form-control" required>
               <option value="" selected disabled>Escolha uma opção...</option>
-              <option>Amarelo/Asiático</option>
               <option>Branco</option>
-              <option>Indígena</option>
               <option>Pardo</option>
               <option>Preto</option>
               <option>Outro</option>
@@ -285,7 +281,10 @@
           <div class="form-group col-md-6">
             <label for="childAge">Idade*</label>
             <select name="childAge" id="childAge" class="form-control" required>
-              <option value="" selected disabled>Escolha uma opção...</option>
+              <option value="" disabled>Escolha uma opção...</option>
+              <option selected>2</option>
+              <option>3</option>
+              <option>4</option>
               <option>5</option>
               <option>6</option>
               <option>7</option>
@@ -333,19 +332,138 @@
       </form>
     </section>
 
+    <section id="pedsql-2-4" class="pedsql d-none">
+      <form class="needs-validation" novalidate>
+        <div id="shadow-pedsql-2-4">
+        </div>
+        <div class="row justify-content-center pt-4 position-relative">
+          <div class="invalid-feedback text-center mt-2">
+            Confira se ao menos um item foi preenchido em cada linha.
+          </div>
+          <button type="button" class="btn btn-secondary back-button mr-1">Retornar</button>
+          <button type="submit" class="btn btn-primary">Prosseguir</button>
+        </div>
+      </form>
+    </section>
+
     <section id="pedsql-5-7" class="pedsql d-none">
-      <form>
+      <form class="needs-validation" novalidate>
+        <div id="shadow-pedsql-5-7">
+        </div>
+        <div class="row justify-content-center pt-4 position-relative">
+          <div class="invalid-feedback text-center mt-2">
+            Confira se ao menos um item foi preenchido em cada linha.
+          </div>
+          <button type="button" class="btn btn-secondary back-button mr-1">Retornar</button>
+          <button type="submit" class="btn btn-primary">Prosseguir</button>
+        </div>
       </form>
     </section>
-
+    
     <section id="pedsql-8-12" class="pedsql d-none">
-      <form>
+      <form class="needs-validation" novalidate>
+        <div id="shadow-pedsql-8-12">
+        </div>
+        <div class="row justify-content-center pt-4 position-relative">
+          <div class="invalid-feedback text-center mt-2">
+            Confira se ao menos um item foi preenchido em cada linha.
+          </div>
+          <button type="button" class="btn btn-secondary back-button mr-1">Retornar</button>
+          <button type="submit" class="btn btn-primary">Prosseguir</button>
+        </div>
+      </form>
+    </section>
+    
+    <section id="pedsql-13-18" class="pedsql d-none">
+      <form class="needs-validation" novalidate>
+        <div id="shadow-pedsql-13-18">
+        </div>
+        <div class="row justify-content-center pt-4 position-relative">
+          <div class="invalid-feedback text-center mt-2">
+            Confira se ao menos um item foi preenchido em cada linha.
+          </div>
+          <button type="button" class="btn btn-secondary back-button mr-1">Retornar</button>
+          <button type="submit" class="btn btn-primary">Prosseguir</button>
+        </div>
+      </form>
+    </section>
+    
+    <section id="pthsi-1-7" class="pthsi d-none">
+      <form class="needs-validation" novalidate>
+        <div id="shadow-pthsi-1-7">
+        </div>
+        <div class="row justify-content-center pt-4 position-relative">
+          <div class="invalid-feedback text-center mt-2">
+            Confira se ao menos um item foi preenchido em cada linha.
+          </div>
+          <button type="button" class="btn btn-secondary back-button mr-1">Retornar</button>
+          <button type="submit" class="btn btn-primary">Prosseguir</button>
+        </div>
       </form>
     </section>
 
-    <section id="pedsql-13-18" class="pedsql d-none">
-      <form>
+    <section id="pthsi-8-14" class="pthsi d-none">
+      <form class="needs-validation" novalidate>
+        <div id="shadow-pthsi-8-14">
+        </div>
+        <div class="row justify-content-center pt-4 position-relative">
+          <div class="invalid-feedback text-center mt-2">
+            Confira se ao menos um item foi preenchido em cada linha.
+          </div>
+          <button type="button" class="btn btn-secondary back-button mr-1">Retornar</button>
+          <button type="submit" class="btn btn-primary">Prosseguir</button>
+        </div>
       </form>
+    </section>
+
+    <section id="pthsi-15-17" class="pthsi d-none">
+      <form class="needs-validation" novalidate>
+        <div id="shadow-pthsi-15-17">
+        </div>
+        <div class="row justify-content-center pt-4 position-relative">
+          <div class="invalid-feedback text-center mt-2">
+            Confira se ao menos um item foi preenchido em cada linha.
+          </div>
+          <button type="button" class="btn btn-secondary back-button mr-1">Retornar</button>
+          <button type="submit" class="btn btn-primary">Prosseguir</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="pthsi-18-23" class="pthsi d-none">
+      <form class="needs-validation" novalidate>
+        <div id="shadow-pthsi-18-23">
+        </div>
+        <div class="row justify-content-center pt-4 position-relative">
+          <div class="invalid-feedback text-center mt-2">
+            Confira se ao menos um item foi preenchido em cada linha.
+          </div>
+          <button type="button" class="btn btn-secondary back-button mr-1">Retornar</button>
+          <button type="submit" class="btn btn-primary">Prosseguir</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="pthsi-24-34" class="pthsi d-none">
+      <form class="needs-validation" novalidate>
+        <div id="shadow-pthsi-24-34">
+        </div>
+        <div class="row justify-content-center pt-4 position-relative">
+          <div class="invalid-feedback text-center mt-2">
+            Confira se ao menos um item foi preenchido em cada linha.
+          </div>
+          <button type="button" class="btn btn-secondary back-button mr-1">Retornar</button>
+          <button type="submit" class="btn btn-primary">Finalizar</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="final" class="pthsi d-none">
+      <p class="h3">Muito obrigado pela sua participação</p>
+      <p class="mb-1 mt-3">Maiores dúvidas: </p>
+      <span>Prof. Dr. José Paulo Cauduro Marostica - (51) 3359-8213</span>
+      <span>Gustavo Vasconcellos Severo - (51) 3359-8249</span>
+      <span>Comitê de Ética em Pesquisa do Hospital de Clínicas de Porto Alegre (HCPA) - (51) 3359-7640</span>
     </section>
 
     <!-- Optional JavaScript -->

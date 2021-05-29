@@ -1,8 +1,8 @@
-function createBoldElement(text) {
-  const bElement = document.createElement("b");
+function createElement(type, text) {
+  const newElement = document.createElement(type);
   const node = document.createTextNode(text);
-  bElement.appendChild(node);
-  return bElement;
+  newElement.appendChild(node);
+  return newElement;
 }
 
 function createItalicElement(text) {
@@ -14,7 +14,7 @@ function createItalicElement(text) {
       const node = document.createTextNode(value);
       iElement.appendChild(node);
     } else {
-      const node = createBoldElement(value);
+      const node = createElement('b', value);
       iElement.appendChild(node);
     }
   });
@@ -22,48 +22,66 @@ function createItalicElement(text) {
   return iElement;
 }
 
-function createTableElement(indexs, { title, questions }) {
+function createFakeTitle(text) {
+  const fakeTitle = createElement("p", text);
+  fakeTitle.classList.add("h5", "mb-3");
+  return fakeTitle;
+}
+
+function createRadioDiv(ref) {
+  const div = document.createElement('div');
+  const input = document.createElement('input');
+
+  div.classList.add('form-check');
+  input.classList.add('form-check-input');
+  input.type = 'radio';
+  input.name = ref;
+  input.id = ref;
+
+  return { div, input };
+}
+
+function createTableElement(indexs, { extra, title, questions }) {
   const table = document.createElement("table");
   const thead = document.createElement("thead");
   const tbody = document.createElement("tbody");
   const trOfTHead = document.createElement("tr");
   const firstTd = document.createElement("td");
-  const firstTdContent = createBoldElement(title);
-
+  const firstTdContent = createElement('b', title);
+  
   firstTd.appendChild(firstTdContent);
   trOfTHead.appendChild(firstTd);
-
+  
   pedsqlConfig.scale.forEach((value) => {
     const td = document.createElement("td");
-    const tdContent = createBoldElement(value);
+    const tdContent = createElement('b', value);
     td.appendChild(tdContent);
     trOfTHead.appendChild(td);
   });
-
+  
   thead.appendChild(trOfTHead);
   table.appendChild(thead);
-
-  console.log(questions);
+  
   questions.forEach((question, index) => {
     const tr = document.createElement('tr');
     const firstTd = document.createElement('td');
     const node = document.createTextNode(`${index}. ${question}`);
     
+    tr.classList.add('form-group');
+    
     firstTd.appendChild(node);
     tr.appendChild(firstTd);
 
-    for(let i = 0; i <= 4; i++) {
+    for(let scaleIndex = 1; scaleIndex <= 5; scaleIndex++) {
       const td = document.createElement('td');
-      const div = document.createElement('div');
-      const input = document.createElement('input');
+      const ref = `pedsql-${indexs.key+1}-${indexs.tableIndex+1}-${index+1}`;
+      const { div, input } = createRadioDiv(ref);
 
-      div.classList.add('form-check');
-      input.classList.add('form-check-input', 'position-static');
-      input.type = 'radio';
-      const ref = `pedsql-${indexs.key}-${indexs.tableIndex}-${index}`;
-      input.name = ref;
-      input.id = ref;
-      input.value = i;
+      input.classList.add('position-static', 'mx-1');
+      input.value = scaleIndex;
+      if (!extra) {
+        input.required = true;
+      }
 
       div.appendChild(input);
       td.appendChild(div);
@@ -78,9 +96,9 @@ function createTableElement(indexs, { title, questions }) {
   return table;
 }
 
-function createQuestions() {
+function createPedsqlQuestions() {
   for (const [key, value] of Object.entries(pedsqlQuestions)) {
-    const form = document.getElementById("pedsql-" + key).children[0];
+    const form = document.getElementById("shadow-pedsql-" + key);
     const iElement = createItalicElement(pedsqlConfig.name);
 
     form.appendChild(iElement);
@@ -88,7 +106,47 @@ function createQuestions() {
     value.forEach((value, tableIndex) => {
       const table = createTableElement({key, tableIndex}, value);
 
+      if (value.extra) {
+        const extra = createElement('b', value.extra);
+        form.appendChild(extra);
+      }
       form.appendChild(table);
     });
+  }
+}
+
+function createPthsiQuestions() {
+  let questionIndex = 0;
+  for (const [key, value] of Object.entries(pthsiQuestions)) {
+    const form = document.getElementById("shadow-pthsi-" + key);
+    
+    value.titles.forEach((title) => {
+      const titleElement = createFakeTitle(title);
+
+      form.appendChild(titleElement);
+    })
+
+    value.questions.forEach(({question, answers}, answerIndex) => {
+      const pElement = createElement("p", '');
+      const boldElement = createElement('b', question);
+      pElement.classList.add('mt-4', 'mb-3');
+      pElement.appendChild(boldElement);
+      form.appendChild(pElement);
+      answers.forEach((answer) => {
+        const ref = `pthsi-${questionIndex+1}`;
+  
+        const { div, input } = createRadioDiv(ref);
+        const label = createElement("label", answer);
+
+        input.value = answerIndex;
+        input.required = true;
+
+        div.appendChild(input);
+        div.appendChild(label);
+        form.appendChild(div);
+      })
+
+      questionIndex++;
+    })
   }
 }
