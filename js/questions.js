@@ -190,6 +190,141 @@ const pedsqlQuestions = {
       ],
     },
   ],
+  1: [
+    {
+      title: "CAPACIDADE FÍSICA (dificuldades para…)",
+      questions: [
+        "Baixo nível de energia",
+        "Problemas para participar de brincadeiras ativas",
+        "Dores",
+        "Cansaço",
+        "Exaustão",
+        "Descansar muito",
+        "Sentir-se muito cansado/a para brincar",
+        "Problemas para andar",
+        "Problemas para correr uma pequena distância sem cair",
+      ],
+    },
+    {
+      title: "SINTOMAS FÍSICOS (dificuldades para…)",
+      questions: [
+        "Gases",
+        "Regurgitar a comida depois de comer",
+        "Problemas para respirar",
+        "Desconforto estomacal",
+        "Problemas para engolir",
+        "Prisão de ventre",
+        "Erupções na pele",
+        "Diarreia",
+        "Sopro pulmonar (som de assobio durante a respiração)",
+        "Vômitos",
+      ],
+    },
+    {
+      title: "ASPECTO EMOCIONAL (dificuldades para…)",
+      questions: [
+        "Sentir medo ou ficar assustado/a",
+        "Ficar com raiva",
+        "Chorar ou ficar agitado porque ficou sozinho/a",
+        "Problemas para se acalmar quando está aborrecido/a",
+        "Problemas para pegar no sono",
+        "Choro ou agitação quando segurado/a",
+        "Ficar triste",
+        "Problemas para se acalmar quando levado/a ao colo",
+        "Problemas para dormir quase a noite toda",
+        "Muito choro",
+        "Irritação",
+        "Problemas para cochilar durante o dia",
+      ],
+    },
+    {
+      title: "INTERAÇÃO SOCIAL (dificuldades para…)",
+      questions: [
+        "Não sorrir para os outros",
+        "Não rir quando fazem cócegas",
+        "Não olhar nos olhos do cuidador",
+        "Não rir quando é segurado/a",
+        "Sentir-se desconfortável com outras crianças",
+      ],
+    },
+    {
+      title: "COGNIÇÃO (dificuldades para…)",
+      questions: [
+        "Não imitar as ações do cuidador",
+        "Não imitar as expressões faciais do cuidador",
+        "Não imitar os sons do cuidador",
+        "Não conseguir manter a atenção em objetos",
+        "Não imitar a fala do cuidador",
+        "Problemas para apontar para partes do próprio corpo quando pedem",
+        "Problemas para nomear objetos conhecidos",
+        "Problemas para repetir palavras",
+        "Problemas para manter sua atenção nas coisas",
+      ],
+    },
+  ],
+  0: [
+    {
+      title: "CAPACIDADE FÍSICA (dificuldades para…)",
+      questions: [
+        "Baixo nível de energia",
+        "Problemas para participar de brincadeiras ativas",
+        "Dores",
+        "Cansaço",
+        "Exaustão",
+        "Descansar muito",
+      ],
+    },
+    {
+      title: "SINTOMAS FÍSICOS (dificuldades para…)",
+      questions: [
+        "Gases",
+        "Regurgitar a comida depois de comer",
+        "Problemas para respirar",
+        "Desconforto estomacal",
+        "Problemas para engolir",
+        "Prisão de ventre",
+        "Erupções na pele",
+        "Diarreia",
+        "Sopro pulmonar (som de assobio durante a respiração)",
+        "Vômitos",
+      ],
+    },
+    {
+      title: "ASPECTO EMOCIONAL (dificuldades para…)",
+      questions: [
+        "Sentir medo ou ficar assustado/a",
+        "Ficar com raiva",
+        "Chorar ou ficar agitado porque ficou sozinho/a",
+        "Problemas para se acalmar quando está aborrecido/a",
+        "Problemas para pegar no sono",
+        "Choro ou agitação quando segurado/a",
+        "Ficar triste",
+        "Problemas para se acalmar quando levado/a ao colo",
+        "Problemas para dormir quase a noite toda",
+        "Muito choro",
+        "Irritação",
+        "Problemas para cochilar durante o dia",
+      ],
+    },
+    {
+      title: "INTERAÇÃO SOCIAL (dificuldades para…)",
+      questions: [
+        "Não sorrir para os outros",
+        "Não rir quando fazem cócegas",
+        "Não olhar nos olhos do cuidador",
+        "Não rir quando é segurado/a",
+      ],
+    },
+    {
+      title: "COGNIÇÃO (dificuldades para…)",
+      questions: [
+        "Não imitar as ações do cuidador",
+        "Não imitar as expressões faciais do cuidador",
+        "Não imitar os sons do cuidador",
+        "Não conseguir manter a atenção em objetos",
+      ],
+    },
+  ],
 };
 
 const pthsiQuestions = {
@@ -197,32 +332,80 @@ const pthsiQuestions = {
     titles: ["Sintomas Físicos"],
     questions: [
       {
-        question: "1. Nas últimas 4 semanas, com que frequência seu filho acordou no meio da noite?",
-        answers: ["Nunca", "Uma vez por semana", "2-3 vezes por semana", "4-5 vezes por semana", "6-7 vezes por semana"]
+        question:
+          "1. Nas últimas 4 semanas, com que frequência seu filho acordou no meio da noite?",
+        answers: [
+          "Nunca",
+          "Uma vez por semana",
+          "2-3 vezes por semana",
+          "4-5 vezes por semana",
+          "6-7 vezes por semana",
+        ],
       },
       {
-        question: "2. Nas últimas 4 semanas, com que frequência seu filho sufocou ou engasgou durante o sono?",
-        answers: ["Nunca", "Uma vez por semana", "2-3 vezes por semana", "4-5 vezes por semana", "6-7 vezes por semana"]
+        question:
+          "2. Nas últimas 4 semanas, com que frequência seu filho sufocou ou engasgou durante o sono?",
+        answers: [
+          "Nunca",
+          "Uma vez por semana",
+          "2-3 vezes por semana",
+          "4-5 vezes por semana",
+          "6-7 vezes por semana",
+        ],
       },
       {
-        question: "3. Nas últimas 4 semanas, com que frequência seu filho precisou de ajuda para respirar durante o sono?",
-        answers: ["Nunca", "Uma vez por semana", "2-3 vezes por semana", "4-5 vezes por semana", "6-7 vezes por semana"]
+        question:
+          "3. Nas últimas 4 semanas, com que frequência seu filho precisou de ajuda para respirar durante o sono?",
+        answers: [
+          "Nunca",
+          "Uma vez por semana",
+          "2-3 vezes por semana",
+          "4-5 vezes por semana",
+          "6-7 vezes por semana",
+        ],
       },
       {
-        question: "4. Nas últimas 4 semanas, com que frequência seu filho teve dificuldade para respirar enquanto estava acordado?",
-        answers: ["Nunca", "Uma vez por semana", "2-3 vezes por semana", "4-5 vezes por semana", "6-7 vezes por semana"]
+        question:
+          "4. Nas últimas 4 semanas, com que frequência seu filho teve dificuldade para respirar enquanto estava acordado?",
+        answers: [
+          "Nunca",
+          "Uma vez por semana",
+          "2-3 vezes por semana",
+          "4-5 vezes por semana",
+          "6-7 vezes por semana",
+        ],
       },
       {
-        question: "5. O meu filho parece ser menos saudável do que outras crianças que conheço.",
-        answers: ["Totalmente verdadeiro", "Mais verdadeiro do que falso", "Não sei", "Mais falso do que verdadeiro", "Totalmente falso"]
+        question:
+          "5. O meu filho parece ser menos saudável do que outras crianças que conheço.",
+        answers: [
+          "Totalmente verdadeiro",
+          "Mais verdadeiro do que falso",
+          "Não sei",
+          "Mais falso do que verdadeiro",
+          "Totalmente falso",
+        ],
       },
       {
         question: "6. O meu filho nunca esteve gravemente doente.",
-        answers: ["Totalmente verdadeiro", "Mais verdadeiro do que falso", "Não sei", "Mais falso do que verdadeiro", "Totalmente falso"]
+        answers: [
+          "Totalmente verdadeiro",
+          "Mais verdadeiro do que falso",
+          "Não sei",
+          "Mais falso do que verdadeiro",
+          "Totalmente falso",
+        ],
       },
       {
-        question: "7. Eu me preocupo mais com a saúde do meu filho do que as outras pessoas se preocupam com a saúde dos seus filhos.",
-        answers: ["Totalmente verdadeiro", "Mais verdadeiro do que falso", "Não sei", "Mais falso do que verdadeiro", "Totalmente falso"]
+        question:
+          "7. Eu me preocupo mais com a saúde do meu filho do que as outras pessoas se preocupam com a saúde dos seus filhos.",
+        answers: [
+          "Totalmente verdadeiro",
+          "Mais verdadeiro do que falso",
+          "Não sei",
+          "Mais falso do que verdadeiro",
+          "Totalmente falso",
+        ],
       },
     ],
   },
@@ -234,50 +417,101 @@ const pthsiQuestions = {
     ],
     questions: [
       {
-        question: "8. foi ao médico (pneumologista ou otorrinolaringologista) por problemas relacionados à traqueostomia?",
-        answers: ["Nenhuma", "1-3 vezes", "4-6 vezes", "7-9 vezes", ">9 vezes"]
+        question:
+          "8. foi ao médico (pneumologista ou otorrinolaringologista) por problemas relacionados à traqueostomia?",
+        answers: ["Nenhuma", "1-3 vezes", "4-6 vezes", "7-9 vezes", ">9 vezes"],
       },
       {
-        question: "9. foi a um serviço de emergência por problemas relacionados à traqueostomia?",
-        answers: ["Nenhuma", "1-3 vezes", "4-6 vezes", "7-9 vezes", ">9 vezes"]
+        question:
+          "9. foi a um serviço de emergência por problemas relacionados à traqueostomia?",
+        answers: ["Nenhuma", "1-3 vezes", "4-6 vezes", "7-9 vezes", ">9 vezes"],
       },
       {
-        question: "10. foi hospitalizado por problemas relacionados à traqueostomia?",
-        answers: ["0 vezes", "1 vez", "2 vezes", "3 vezes", "≥ 4 vezes ou hospitalizado cronicamente"]
+        question:
+          "10. foi hospitalizado por problemas relacionados à traqueostomia?",
+        answers: [
+          "0 vezes",
+          "1 vez",
+          "2 vezes",
+          "3 vezes",
+          "≥ 4 vezes ou hospitalizado cronicamente",
+        ],
       },
       {
-        question: "11. Quantas horas por dia você sente necessidade de cuidados de enfermagem em casa?",
-        answers: ["0-4", "4-8", "8-12", "12-16", "16-24"]
+        question:
+          "11. Quantas horas por dia você sente necessidade de cuidados de enfermagem em casa?",
+        answers: ["0-4", "4-8", "8-12", "12-16", "16-24"],
       },
       {
-        question: "12. Quantas horas por dia você recebe cuidados de enfermagem em casa?",
-        answers: ["0-4", "4-8", "8-12", "12-16", "16-24"]
+        question:
+          "12. Quantas horas por dia você recebe cuidados de enfermagem em casa?",
+        answers: ["0-4", "4-8", "8-12", "12-16", "16-24"],
       },
       {
-        question: "13. Quantos dias por semana você sente necessidade de cuidados de enfermagem em casa?",
-        answers: ["Nunca", "Uma vez por semana", "2-3 vezes por semana", "4-6 vezes por semana", "Todos os dias"]
+        question:
+          "13. Quantos dias por semana você sente necessidade de cuidados de enfermagem em casa?",
+        answers: [
+          "Nunca",
+          "Uma vez por semana",
+          "2-3 vezes por semana",
+          "4-6 vezes por semana",
+          "Todos os dias",
+        ],
       },
       {
-        question: "14. Quantos dias por semana você recebe cuidados de enfermagem em casa?",
-        answers: ["Nunca", "Uma vez por semana", "2-3 vezes por semana", "4-6 vezes por semana", "Todos os dias"]
+        question:
+          "14. Quantos dias por semana você recebe cuidados de enfermagem em casa?",
+        answers: [
+          "Nunca",
+          "Uma vez por semana",
+          "2-3 vezes por semana",
+          "4-6 vezes por semana",
+          "Todos os dias",
+        ],
       },
     ],
   },
 
   "15-17": {
-    titles: ["Estresse e como lidar com as dificuldades / Visão do cuidador sobre a perspectiva da criança"],
+    titles: [
+      "Estresse e como lidar com as dificuldades / Visão do cuidador sobre a perspectiva da criança",
+    ],
     questions: [
       {
-        question: "15. Para seu filho, o quanto é difícil ou incômodo não poder nadar no verão?",
-        answers: ["Nem um pouco difícil / incômodo", "Um pouco difícil / incômodo", "Moderadamente difícil / incômodo", "Muito difícil / incômodo", "Extremamente difícil / incômodo", "Não se aplica"]
+        question:
+          "15. Para seu filho, o quanto é difícil ou incômodo não poder nadar no verão?",
+        answers: [
+          "Nem um pouco difícil / incômodo",
+          "Um pouco difícil / incômodo",
+          "Moderadamente difícil / incômodo",
+          "Muito difícil / incômodo",
+          "Extremamente difícil / incômodo",
+          "Não se aplica",
+        ],
       },
       {
-        question: "16. Para seu filho, o quanto é difícil ou incômodo não poder brincar na banheira?",
-        answers: ["Nem um pouco difícil / incômodo", "Um pouco difícil / incômodo", "Moderadamente difícil / incômodo", "Muito difícil / incômodo", "Extremamente difícil / incômodo", "Não se aplica"]
+        question:
+          "16. Para seu filho, o quanto é difícil ou incômodo não poder brincar na banheira?",
+        answers: [
+          "Nem um pouco difícil / incômodo",
+          "Um pouco difícil / incômodo",
+          "Moderadamente difícil / incômodo",
+          "Muito difícil / incômodo",
+          "Extremamente difícil / incômodo",
+          "Não se aplica",
+        ],
       },
       {
-        question: "17. Para seu filho, o quanto é difícil ou o quanto ele se sente incomodado pelo jeito que a voz dele soa?",
-        answers: ["Nem um pouco difícil / incômodo", "Um pouco difícil / incômodo", "Moderadamente difícil / incômodo", "Muito difícil / incômodo", "Extremamente difícil / incômodo", "Não se aplica"]
+        question:
+          "17. Para seu filho, o quanto é difícil ou o quanto ele se sente incomodado pelo jeito que a voz dele soa?",
+        answers: [
+          "Nem um pouco difícil / incômodo",
+          "Um pouco difícil / incômodo",
+          "Moderadamente difícil / incômodo",
+          "Muito difícil / incômodo",
+          "Extremamente difícil / incômodo",
+          "Não se aplica",
+        ],
       },
     ],
   },
@@ -287,27 +521,32 @@ const pthsiQuestions = {
     questions: [
       {
         question: "18. Como você descreveria sua qualidade de vida em geral?",
-        answers: ["Excelente", "Muito boa", "Boa", "Regular", "Ruim"]
+        answers: ["Excelente", "Muito boa", "Boa", "Regular", "Ruim"],
       },
       {
-        question: "19. Com que frequência você consegue realizar afazeres domésticos?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "19. Com que frequência você consegue realizar afazeres domésticos?",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
-        question: "20. Com que frequência você fica apreensivo ou preocupado com a segurança do seu filho durante a troca da cânula da traqueostomia?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "20. Com que frequência você fica apreensivo ou preocupado com a segurança do seu filho durante a troca da cânula da traqueostomia?",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
-        question: "21. Com que frequência você fica apreensivo ou preocupado com a segurança do seu filho durante a aspiração da cânula de traqueostomia?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "21. Com que frequência você fica apreensivo ou preocupado com a segurança do seu filho durante a aspiração da cânula de traqueostomia?",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
-        question: "22. Com que frequência você fica apreensivo ou preocupado com a capacidade do seu filho de respirar?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "22. Com que frequência você fica apreensivo ou preocupado com a capacidade do seu filho de respirar?",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
-        question: "23. Na última semana, com que frequência você conseguiu sair de dentro de casa com seu filho (para afazeres ou lazer)?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "23. Na última semana, com que frequência você conseguiu sair de dentro de casa com seu filho (para afazeres ou lazer)?",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
     ],
   },
@@ -316,49 +555,57 @@ const pthsiQuestions = {
     titles: ["Durante as últimas 4 semanas, com que frequência..."],
     questions: [
       {
-        question: "24. Você ficou apreensivo ou preocupado com a saúde física do seu filho?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "24. Você ficou apreensivo ou preocupado com a saúde física do seu filho?",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
-        question: "25. Você ficou apreensivo ou preocupado com o bem-estar emocional ou comportamento do seu filho?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "25. Você ficou apreensivo ou preocupado com o bem-estar emocional ou comportamento do seu filho?",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
-        question: "26. Você sentiu alguma limitação em atender suas próprias necessidades por causa da saúde física do seu filho?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "26. Você sentiu alguma limitação em atender suas próprias necessidades por causa da saúde física do seu filho?",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
         question: "27. A condição do seu filho tem afetado a sua saúde?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
-        question: "28. Você sentiu alguma limitação em atender suas próprias necessidades por causa do bem-estar emocional ou comportamento do seu filho?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "28. Você sentiu alguma limitação em atender suas próprias necessidades por causa do bem-estar emocional ou comportamento do seu filho?",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
-        question: "29. A condição do seu filho tem afetado seu estado emocional?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "29. A condição do seu filho tem afetado seu estado emocional?",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
-        question: "30. A condição do seu filho tem afetado seu relacionamento conjugal/amoroso?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "30. A condição do seu filho tem afetado seu relacionamento conjugal/amoroso?",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
         question: "31. A condição do seu filho tem afetado seu sono?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
-        question: "32. A condição do seu filho tem interrompido as variadas atividades do cotidiano da família? (refeições, assistir TV, sair de casa)",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "32. A condição do seu filho tem interrompido as variadas atividades do cotidiano da família? (refeições, assistir TV, sair de casa)",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
-        question: "33. Você precisou da ajuda de profissional de saúde habilitado?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
+        question:
+          "33. Você precisou da ajuda de profissional de saúde habilitado?",
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
       },
       {
         question: "34. Você obteve ajuda de profissional de saúde habilitado?",
-        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"]
-      }
+        answers: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Sempre"],
+      },
     ],
-  }
+  },
 };

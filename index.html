@@ -155,7 +155,7 @@
             <label for="parentName">Nome*</label>
             <input
               type="name"
-              name="name"
+              name="parentName"
               class="form-control"
               id="parentName"
               placeholder="Seu nome"
@@ -164,14 +164,13 @@
             />
           </div>
           <div class="form-group col-md-6">
-            <label for="city">Cidade que mora*</label>
+            <label for="age">Idade*</label>
             <input
-              type="name"
-              name="city"
+              type="number"
+              name="age"
               class="form-control"
-              id="city"
-              placeholder="Sua cidade"
-              autocomplete="address-level2"
+              id="age"
+              placeholder="Sua idade"
               required
             />
           </div>
@@ -191,11 +190,11 @@
               <option>Médio Incompleto</option>
               <option>Médio Completo</option>
               <option>Superior Incompleto</option>
-              <option>Superior Completo ou mais</option>
+              <option>Superior Completo ou maior</option>
             </select>
           </div>
           <div class="form-group col-md-3 d-none">
-            <label for="schoolingOther">Até que série/ano cursou?*</label>
+            <label for="schoolingOther">Até que série ou ano cursou?*</label>
             <input
               type="name"
               name="schoolingOther"
@@ -232,13 +231,13 @@
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="relatives">Grau de Parentesco*</label>
+            <label for="relatives">Parentesco com a criança*</label>
             <input
               type="name"
               name="relatives"
               class="form-control"
               id="relatives"
-              placeholder="Seu grau de parentesco com a criança"
+              placeholder="Seu parentesco com a criança"
               required
             />
           </div>
@@ -246,11 +245,10 @@
             <label for="skinColor">Cor de Pele*</label>
             <select name="skinColor" id="skinColor" class="form-control" required>
               <option value="" selected disabled>Escolha uma opção...</option>
-              <option>Branco</option>
-              <option>Pardo</option>
-              <option>Preto</option>
-              <option>Outro</option>
-              <option>Prefiro não responder</option>
+              <option>Branca</option>
+              <option>Parda</option>
+              <option>Preta</option>
+              <option>Outra</option>
             </select>
           </div>
           <div class="form-group col-md-3 d-none">
@@ -264,7 +262,33 @@
             />
           </div>
         </div>
-        <p class="h5 pt-3">Dados da criança</p>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="city">Cidade de moradia*</label>
+            <input
+              type="name"
+              name="city"
+              class="form-control"
+              id="city"
+              placeholder="Sua cidade"
+              autocomplete="address-level2 locality"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="state">UF de moradia*</label>
+            <input
+              type="name"
+              name="state"
+              class="form-control"
+              id="state"
+              placeholder="Seu estado"
+              autocomplete="address-level3 region"
+              required
+            />
+          </div>
+        </div>
+        <p class="h5 pt-3">Dados referentes à criança ou adolescente traqueostomizado</p>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="childName">Nome*</label>
@@ -280,9 +304,26 @@
           </div>
           <div class="form-group col-md-6">
             <label for="childAge">Idade*</label>
-            <select name="childAge" id="childAge" class="form-control" required>
-              <option value="" disabled>Escolha uma opção...</option>
-              <option selected>2</option>
+            <input
+              type="number"
+              name="childAge"
+              class="form-control"
+              id="childAge"
+              placeholder="Sua idade"
+              autocomplete="off"
+              required
+            />
+          </div>
+        </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="procedureAge">Idade em que realizou a traqueostomia:*</label>
+            <select name="procedureAge" id="procedureAge" class="form-control" required>
+              <option selected value="" disabled>Escolha uma opção...</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
               <option>3</option>
               <option>4</option>
               <option>5</option>
@@ -300,12 +341,8 @@
               <option>18</option>
             </select>
           </div>
-        </div>
-        </div>
-        <p class="h5 pt-3">Dados do acompanhamento</p>
-        <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="followingCity">Cidade*</label>
+            <label for="followingCity">Cidade na qual faz acompanhamento*</label>
             <input
               type="name"
               name="name"
@@ -316,17 +353,59 @@
               required
             />
           </div>
+        </div>
+        <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="followingType">Privado/público?*</label>
+            <label for="followingState">UF na qual faz acompanhamento*</label>
+            <input
+              type="name"
+              name="followingState"
+              class="form-control"
+              id="followingState"
+              placeholder="Estado em que faz o acompanhamento"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="followingType">Acompanhamento médico*</label>
             <select name="followingType" id="followingType" class="form-control" required>
               <option value="" selected disabled>Escolha uma opção...</option>
-              <option>Sus</option>
-              <option>Privado</option>
-              <option>Misto/Ambos</option>
+              <option value="Público">Público (Sus)</option>
+              <option value="Privado">Privado (Particular ou convênios)</option>
+              <option value="Misto">Misto (uma parte no público e uma parte no privado</option>
             </select>
           </div>
         </div>
         <div class="row justify-content-center pt-3">
+          <button type="submit" class="btn btn-primary">Prosseguir</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="pedsql-0" class="pedsql d-none">
+      <form class="needs-validation" novalidate>
+        <div id="shadow-pedsql-1">
+        </div>
+        <div class="row justify-content-center pt-4 position-relative">
+          <div class="invalid-feedback text-center mt-2">
+            Confira se ao menos um item foi preenchido em cada linha.
+          </div>
+          <button type="button" class="btn btn-secondary back-button mr-1">Retornar</button>
+          <button type="submit" class="btn btn-primary">Prosseguir</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="pedsql-0" class="pedsql d-none">
+      <form class="needs-validation" novalidate>
+        <div id="shadow-pedsql-0">
+        </div>
+        <div class="row justify-content-center pt-4 position-relative">
+          <div class="invalid-feedback text-center mt-2">
+            Confira se ao menos um item foi preenchido em cada linha.
+          </div>
+          <button type="button" class="btn btn-secondary back-button mr-1">Retornar</button>
           <button type="submit" class="btn btn-primary">Prosseguir</button>
         </div>
       </form>

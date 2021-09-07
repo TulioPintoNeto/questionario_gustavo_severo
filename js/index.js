@@ -1,8 +1,10 @@
 const byAge = () => {
   const age = parseFloat(document.getElementById("childAge").value);
   switch (true) {
-    case age < 2:
-      return null;
+    case age === 0:
+      return "pedsql-0";
+    case age === 1:
+      return "pedsql-1";
     case age <= 4:
       return "pedsql-2-4";
     case age <= 7:
@@ -107,7 +109,7 @@ function handleSchoolingChange(target) {
 function handleSkinColorChange(target) {
   const formGroupClasses = target.parentNode.classList;
   const skinColorOther = document.getElementById("skinColorOther");
-  if (target.value === "Outro") {
+  if (target.value === "Outra") {
     formGroupClasses.remove("col-md-6");
     formGroupClasses.add("col-md-3");
     skinColorOther.parentNode.classList.remove("d-none");
