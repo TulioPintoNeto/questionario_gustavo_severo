@@ -1,8 +1,6 @@
 const formDataAnswers = new FormData();
-// const baseUrl = "https://questionario-gustavo-severo.herokuapp.com/";
-const baseUrl = "http://localhost:3000";
-// const thisUrl = "https://validapthsi-hcpa.com.br/";
-const thisUrl = "http://127.0.0.1:5500";
+const baseUrl = "https://questionario-gustavo-severo.herokuapp.com/";
+// const baseUrl = "http://localhost:3000";
 
 const byAge = () => {
     const age = parseFloat(document.getElementById("childAge").value);
