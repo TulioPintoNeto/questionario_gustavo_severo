@@ -74,7 +74,7 @@ function createTableElement(indexs, { extra, title, questions }) {
 
         for (let scaleIndex = 1; scaleIndex <= 5; scaleIndex++) {
             const td = document.createElement("td");
-            const ref = `pedsql-${indexs.key}-${
+            const ref = `pedsql_${indexs.key}_${
                 indexs.tableIndex + 1
             }-${index}`;
             const { div, input } = createRadioDiv(ref);
@@ -135,7 +135,7 @@ function createPthsiQuestions() {
             pElement.appendChild(boldElement);
             form.appendChild(pElement);
             answers.forEach((answer, answerIndex) => {
-                const ref = `pthsi-${questionIndex + 1}`;
+                const ref = `pthsi_${questionIndex + 1}`;
 
                 const { div, input } = createRadioDiv(ref);
                 const label = createElement("label", answer);
