@@ -1,5 +1,5 @@
 const formDataAnswers = new FormData();
-const baseUrl = "https://questionario-gustavo-severo.herokuapp.com/";
+const baseUrl = "https://questionario-gustavo-severo.herokuapp.com";
 // const baseUrl = "http://localhost:3000";
 
 const byAge = () => {
