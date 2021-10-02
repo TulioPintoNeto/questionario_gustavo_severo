@@ -1,102 +1,110 @@
-html, body {
-  color: #39633d;
-  background: #ededed;
+html,
+body {
+    color: #39633d;
+    background: #ededed;
 }
 
 th {
-  padding: 0 5px;
+    padding: 0 5px;
 }
 
 .btn {
-  width: 120px;
+    width: 120px;
 }
 
 .btn-primary {
-  background: #39633d;
-  border: 1px solid #325936;
+    background: #39633d;
+    border: 1px solid #325936;
 }
 
 .btn-primary:hover {
-  background: #4d7a51;
-  border: 1px solid #47734b;
+    background: #4d7a51;
+    border: 1px solid #47734b;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active {
-  background: #5b875e;
-  border: 1px solid #548057;
+    background: #5b875e;
+    border: 1px solid #548057;
 }
 
 .container {
-  background: white;
-  padding: 20px;
-  border: 1px solid rgba(0,0,0,0.15);
-  border-radius: 4px;
+    background: white;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
 .was-validated .invalid-feedback:not(.automatically) {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: -12px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -12px;
 }
 
-.form-control.is-valid, .was-validated .form-control:valid {
-  background-position: center right calc(.7em + .1875rem)
+.form-control.is-valid,
+.was-validated .form-control:valid {
+    background-position: center right calc(0.7em + 0.1875rem);
 }
 
-.form-control.is-invalid, .was-validated .form-control:invalid {
-  background-position: center right calc(0.7em + .1875rem);
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    background-position: center right calc(0.7em + 0.1875rem);
 }
 
 #hcpa-logo {
-  width: 200px;
+    width: 200px;
 }
 
 #mapi-logo {
-  width: 180px;
+    width: 180px;
 }
 
 #term {
-  padding: 8px 30px;
-  border: 1px solid rgba(0,0,0,0.15);
-  border-radius: 8px;
-  background: #E5EDD6;
+    padding: 8px 30px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    background: #e5edd6;
+}
+
+.form-check-user {
+    display: inline-block;
 }
 
 .pedsql table {
-  margin: 15px 0;
+    margin: 15px 0;
 }
 
 .pedsql thead tr {
-  border-top: 1px solid #a7a7a7;
-  border-bottom: 1px solid #a7a7a7;
+    border-top: 1px solid #a7a7a7;
+    border-bottom: 1px solid #a7a7a7;
 }
 
 .pedsql tbody tr {
-  border-top: 1px solid #d7d7d7;
-  border-bottom: 1px solid #d7d7d7;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
 }
 
-.pedsql table, .pedsql tr {
-  width: 100%;
+.pedsql table,
+.pedsql tr {
+    width: 100%;
 }
 
 .pedsql thead td:not(:first-child) {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 .pedsql td {
-  text-align: center;
-  width: 10%;
+    text-align: center;
+    width: 10%;
 }
 
 .pedsql td:first-child {
-  text-align: left;
-  width: 50%;
+    text-align: left;
+    width: 50%;
 }
 
 #final {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
