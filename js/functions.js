@@ -9,6 +9,44 @@ function getAge(dateString) {
     return age;
 }
 
+function mockFill() {
+    document.getElementById("parentName").value = "Tulio Pinto Neto";
+    document.getElementById("age").value = "28";
+    document.getElementById("schooling").value = "Fundamental Completo";
+    document.getElementById("income").value = "1000";
+    document.getElementById("relatives").value = "Pai";
+    document.getElementById("skinColor").value = "Branca";
+    document.getElementById("city").value = "Porto Alegre";
+    document.getElementById("state").value = "RS";
+    document.getElementById("childName").value = "Luiza";
+    const childBirthDate = document.getElementById("childBirthDate");
+    childBirthDate.value = "2021-03-03";
+    handleChildBirthDateChange(childBirthDate);
+    document.getElementById("procedureAge").value = "0";
+    document.getElementById("followingFalse").checked = true;
+
+    for (const [key, value] of Object.entries(pedsqlQuestions)) {
+        value.forEach((value, tableIndex) => {
+            const indexs = { key, tableIndex };
+            value.questions.forEach((question, index) => {
+                const ref = `pedsql_${indexs.key}_${
+                    indexs.tableIndex + 1
+                }-${index}`;
+                document.getElementById(ref).checked = true;
+            });
+        });
+    }
+
+    let questionIndex = 0;
+    for (const [key, value] of Object.entries(pthsiQuestions)) {
+        value.questions.forEach(({ question, answers }) => {
+            const ref = `pthsi_${questionIndex + 1}`;
+            document.getElementById(ref).checked = true;
+            questionIndex++;
+        });
+    }
+}
+
 function submitForm() {
     const headers = new Headers();
     headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
