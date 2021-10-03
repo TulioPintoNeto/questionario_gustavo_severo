@@ -55,7 +55,9 @@ function submitForm() {
 
     var answersObject = {};
     formDataAnswers.forEach(function (value, key) {
-        answersObject[key] = value;
+        if (key != "following") {
+            answersObject[key] = value;
+        }
     });
     var answersJson = JSON.stringify(answersObject);
 
