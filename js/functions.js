@@ -1,6 +1,6 @@
 function getAge(dateString) {
     var today = new Date();
-    var birthDate = new Date(dateString);
+    var birthDate = new Date(`${dateString} 00:00`);
     var age = today.getFullYear() - birthDate.getFullYear();
     var m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
@@ -136,13 +136,19 @@ function handleChildBirthDateChange(target) {
 }
 
 function handleFollowingChange(target) {
+    const followingRow = document.getElementById("following-row");
+    let required;
+
     if (target.value === "true") {
-        followingRow = document.getElementById("following-row");
         followingRow.classList.remove("d-none");
+        required = true;
+    }
+    if (target.value === "false") {
+        followingRow.classList.add("d-none");
+        required = false;
     }
 
-    if (target.value === "false") {
-        followingRow = document.getElementById("following-row");
-        followingRow.classList.add("d-none");
-    }
+    followingRow.children[0].children.followingCity.required = required;
+    followingRow.children[1].children.followingState.required = required;
+    followingRow.children[2].children.followingType.required = required;
 }
