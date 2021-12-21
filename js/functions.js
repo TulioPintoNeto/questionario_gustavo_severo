@@ -49,7 +49,10 @@ function mockFill() {
 
 function submitForm() {
     const headers = new Headers();
-    headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+    headers.append(
+        "Access-Control-Allow-Origin",
+        "https://validapthsi-hcpa.com.br"
+    );
     headers.append("Content-Type", "application/json");
     headers.append("Accept", "*/*");
 
